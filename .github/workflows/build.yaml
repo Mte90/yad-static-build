@@ -23,11 +23,9 @@ jobs:
     - name: Download YAD source
       run: |
         git clone https://github.com/v1cont/yad
-        cd yad
-        ls -l
     - name: Make
+      working-directory: ./yad
       run: |
-        ls -l
         autoreconf -ivf && intltoolize
         mkdir build && cd build
         ../configure --enable-standalone && make
