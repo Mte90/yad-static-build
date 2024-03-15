@@ -35,11 +35,10 @@ jobs:
       working-directory: ./yad/build
       run: ls -l .yad && zip --junk-paths yad ./yad
     - name: Create Release
-      working-directory: ./yad/build
       id: create_release
       uses: softprops/action-gh-release@v2
       if: startsWith(github.ref, 'refs/tags')
       with:
         draft: false
         prerelease: false
-        files: yad.zip
+        files: ./yad/build/yad.zip
