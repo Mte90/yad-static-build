@@ -1,8 +1,7 @@
 name: Release on Tag
 on:
   push:
-    branches:
-      - master
+    workflow_dispatch: {}
     tags:
       - 'v*' # Push events to matching v*, i.e. v1.0
       - 'nightly-*'
