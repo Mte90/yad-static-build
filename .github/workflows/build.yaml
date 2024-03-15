@@ -30,8 +30,8 @@ jobs:
         ../configure --enable-standalone && make -j16
     - name: Download packelf tool
       run: |
-        git clone https://github.com/oufm/packelf
-        ./packelf/packelf.sh  ./yad/build/src/yad ./yad-static-build
+        git clone https://github.com/mte90/packelf
+        ./packelf/packelf-kp.sh  ./yad/build/src/yad ./yad-static-build
         ls -l
     - name: Package project
       run: |
