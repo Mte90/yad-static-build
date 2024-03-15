@@ -32,8 +32,8 @@ jobs:
       run: |
         ../configure --enable-standalone && make
     - name: Package project
-      working-directory: ./yad/build
-      run: ls -l ./ && zip --junk-paths yad ./yad
+      run: |
+        zip --junk-paths yad ./src/yad
     - name: Create Release
       id: create_release
       uses: softprops/action-gh-release@v2
