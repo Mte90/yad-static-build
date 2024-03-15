@@ -31,7 +31,7 @@ jobs:
     - name: Download packelf tool
       run: |
         git clone https://github.com/mte90/packelf
-        ./packelf/packelf-kp.sh  ./yad/build/src/yad ./yad-static-build
+        ./packelf/packelf-kf.sh  ./yad/build/src/yad ./yad-static-build
         ls -l
     - name: Package project
       run: |
