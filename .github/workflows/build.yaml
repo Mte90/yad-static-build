@@ -30,9 +30,10 @@ jobs:
     - name: Make
       working-directory: ./yad/build
       run: |
-        ../configure --enable-standalone && make
+        ../configure --enable-standalone && make -j16
     - name: Package project
       run: |
+        ls -l ./src
         zip --junk-paths yad ./src/yad
     - name: Create Release
       id: create_release
