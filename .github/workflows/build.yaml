@@ -23,11 +23,13 @@ jobs:
     - name: Download YAD source
       run: |
         git clone https://github.com/v1cont/yad
-    - name: Make
+    - name: Configure Make
       working-directory: ./yad
       run: |
         autoreconf -ivf && intltoolize
-        mkdir build && cd build
+    - name: Make
+      working-directory: ./yad/build
+      run: |
         ../configure --enable-standalone && make
     - name: Package project
     # junk paths remove to recreate the path where is the file inside the zip package
