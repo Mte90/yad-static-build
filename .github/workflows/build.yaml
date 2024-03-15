@@ -33,7 +33,8 @@ jobs:
         ../configure --enable-standalone && make -j16
     - name: Package project
       run: |
-        ls -l ./src
+        ls -l ./
+        pwd
         zip --junk-paths yad ./src/yad
     - name: Create Release
       id: create_release
