@@ -2,7 +2,7 @@
 
 This repository is just a CI that publish a GH release with the latest [yad](https://github.com/v1cont/yad) version compiled in a static binary with everything, so it is self-contained.
 
-*Right now doesn't compile with webgtk and gtk-spell support to keep lightweight.*
+*Right now doesn't compile with gtk-spell support to keep lightweight.*
 
 ## How works
 
@@ -13,7 +13,7 @@ This repository is just a CI that publish a GH release with the latest [yad](htt
 * Install dev dependencies
 * Download the latest version from the yad repository
 * Compile it using the `--enable-standalone` official parameter
-* Using [packelff](https://github.com/oufm/packelf) generate a static binary with everything
+* Using [packelf](https://github.com/oufm/packelf) generate a static binary with everything
 * Zip it and update the release with the asset
 
 The advantage of this, is that if you try the same workflow in your machine the build can be 80~mb (in my case) as find more library that the package could need.

@@ -16,7 +16,7 @@ jobs:
       uses: actions/checkout@v4
     - name: Install dependencies
       run: |
-        sudo apt-get install build-essential intltool libgtk-3-dev gcc g++  -y
+        sudo apt-get install build-essential intltool libgtk-3-dev gcc g++ libwebkitgtk-6.0-dev -y
     - name: Download YAD source
       run: |
         git clone https://github.com/v1cont/yad
@@ -31,7 +31,7 @@ jobs:
     - name: Download packelf tool
       run: |
         git clone https://github.com/mte90/packelf
-        ./packelf/packelf-kf.sh  ./yad/build/src/yad ./yad-static-build
+        ./packelf/packelf.sh  ./yad/build/src/yad ./yad-static-build
         ls -l
     - name: Package project
       run: |
